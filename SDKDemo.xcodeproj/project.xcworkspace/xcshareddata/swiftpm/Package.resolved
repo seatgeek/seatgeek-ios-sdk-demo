@@ -1,0 +1,15 @@
+{
+  "originHash" : "bdb111b3903c7ce45e16eb89a694c85e3eb85b425f3b6effeeb19f685e568522",
+  "pins" : [
+    {
+      "identity" : "seatgeek-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/seatgeek/seatgeek-ios-sdk",
+      "state" : {
+        "revision" : "f22ecd0b4c780094ada3e62f764003499e29082b",
+        "version" : "4.6.1"
+      }
+    }
+  ],
+  "version" : 3
+}
