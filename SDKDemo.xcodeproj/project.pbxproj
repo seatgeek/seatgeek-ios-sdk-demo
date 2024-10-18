@@ -557,7 +557,7 @@
 			repositoryURL = "https://github.com/seatgeek/seatgeek-ios-sdk";
 			requirement = {
 				kind = exactVersion;
-				version = 4.6.1;
+				version = 4.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
