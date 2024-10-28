@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Child" : {
+
+    },
+    "Home" : {
+
+    },
+    "More" : {
+
+    },
+    "Nav" : {
+
+    },
+    "Navigate to My Tickets" : {
+
+    },
+    "SeatGeek" : {
+
+    },
+    "Show My Tickets Sheet" : {
+
+    },
+    "Sign Out" : {
+
+    },
+    "Tab" : {
+
+    },
+    "Transaction History" : {
+
+    }
+  },
+  "version" : "1.0"
+}
