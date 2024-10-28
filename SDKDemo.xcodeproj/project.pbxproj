@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F1AEEB02CCF9EB5008DFCDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */; };
-		4F1AEEB12CCF9EB5008DFCDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */; };
+		4F1AEEB92CCFA564008DFCDF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AEEB82CCFA564008DFCDF /* Localizable.xcstrings */; };
+		4F1AEEBA2CCFA564008DFCDF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AEEB82CCFA564008DFCDF /* Localizable.xcstrings */; };
 		4F1D3D7A2C821F02006B8518 /* SDKDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D3D792C821F02006B8518 /* SDKDemoApp.swift */; };
 		4F1D3D7C2C821F02006B8518 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D3D7B2C821F02006B8518 /* HomeView.swift */; };
 		4F1D3D7E2C821F04006B8518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1D3D7D2C821F04006B8518 /* Assets.xcassets */; };
@@ -29,9 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F1AEEAF2CCF9EB5008DFCDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4F1AEEB22CCF9F12008DFCDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4F1AEEB52CCF9F3A008DFCDF /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4F1AEEB82CCFA564008DFCDF /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4F1D3D762C821F02006B8518 /* SDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1D3D792C821F02006B8518 /* SDKDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKDemoApp.swift; sourceTree = "<group>"; };
 		4F1D3D7B2C821F02006B8518 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 		4F1AEEB42CCF9F28008DFCDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */,
+				4F1AEEB82CCFA564008DFCDF /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -259,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1D3D812C821F04006B8518 /* Preview Assets.xcassets in Resources */,
-				4F1AEEB02CCF9EB5008DFCDF /* Localizable.strings in Resources */,
+				4F1AEEB92CCFA564008DFCDF /* Localizable.xcstrings in Resources */,
 				4F1D3D7E2C821F04006B8518 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1D3D9A2C821F62006B8518 /* Assets.xcassets in Resources */,
-				4F1AEEB12CCF9EB5008DFCDF /* Localizable.strings in Resources */,
+				4F1AEEBA2CCFA564008DFCDF /* Localizable.xcstrings in Resources */,
 				4F1D3D9D2C821F62006B8518 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,16 +303,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F1AEEAF2CCF9EB5008DFCDF /* en */,
-				4F1AEEB22CCF9F12008DFCDF /* es */,
-				4F1AEEB52CCF9F3A008DFCDF /* fr-CA */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		4F1D3D9B2C821F62006B8518 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -386,6 +374,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -443,6 +432,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
