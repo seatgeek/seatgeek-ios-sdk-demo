@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1AEEB02CCF9EB5008DFCDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */; };
+		4F1AEEB12CCF9EB5008DFCDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */; };
 		4F1D3D7A2C821F02006B8518 /* SDKDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D3D792C821F02006B8518 /* SDKDemoApp.swift */; };
 		4F1D3D7C2C821F02006B8518 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D3D7B2C821F02006B8518 /* HomeView.swift */; };
 		4F1D3D7E2C821F04006B8518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1D3D7D2C821F04006B8518 /* Assets.xcassets */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1AEEAF2CCF9EB5008DFCDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4F1AEEB22CCF9F12008DFCDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4F1AEEB52CCF9F3A008DFCDF /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4F1D3D762C821F02006B8518 /* SDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1D3D792C821F02006B8518 /* SDKDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKDemoApp.swift; sourceTree = "<group>"; };
 		4F1D3D7B2C821F02006B8518 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -68,9 +73,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1AEEB32CCF9F24008DFCDF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4F1AEEB42CCF9F28008DFCDF /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4F1AEEB42CCF9F28008DFCDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4F1D3D6D2C821F02006B8518 = {
 			isa = PBXGroup;
 			children = (
+				4F1AEEB32CCF9F24008DFCDF /* Shared */,
 				4F1D3D782C821F02006B8518 /* SDKDemo */,
 				4F1D3D8F2C821F5F006B8518 /* SDKDemo-UIKit */,
 				4F8BCD3F2CB95B66001934B6 /* Frameworks */,
@@ -214,6 +236,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				"fr-CA",
 			);
 			mainGroup = 4F1D3D6D2C821F02006B8518;
 			packageReferences = (
@@ -235,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1D3D812C821F04006B8518 /* Preview Assets.xcassets in Resources */,
+				4F1AEEB02CCF9EB5008DFCDF /* Localizable.strings in Resources */,
 				4F1D3D7E2C821F04006B8518 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1D3D9A2C821F62006B8518 /* Assets.xcassets in Resources */,
+				4F1AEEB12CCF9EB5008DFCDF /* Localizable.strings in Resources */,
 				4F1D3D9D2C821F62006B8518 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +305,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4F1AEEAE2CCF9EB5008DFCDF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F1AEEAF2CCF9EB5008DFCDF /* en */,
+				4F1AEEB22CCF9F12008DFCDF /* es */,
+				4F1AEEB52CCF9F3A008DFCDF /* fr-CA */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		4F1D3D9B2C821F62006B8518 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +331,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -358,6 +395,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
