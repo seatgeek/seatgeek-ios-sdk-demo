@@ -39,7 +39,8 @@ class HomeViewController: UIViewController {
         let seatGeekVC = SGKSDKMyTicketsController()
         seatGeekVC.navigationItem.title = "SeatGeek"
         seatGeekVC.navigationItem.rightBarButtonItems = [
-            seatGeekVC.transactionHistoryIconBarButtonItem()
+            seatGeekVC.transactionHistoryIconBarButtonItem(),
+            seatGeekVC.moreOptionsIconBarButtonItem()
         ]
         navigationController?.pushViewController(seatGeekVC, animated: true)
     }

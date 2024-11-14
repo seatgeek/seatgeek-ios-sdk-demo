@@ -12,9 +12,19 @@ struct SeatGeekView: View {
             .navigationTitle("SeatGeek")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("Log Out", action: {
-                    SeatGeek.logOut()
-                })
+                Button {
+                    showingMoreOptions = true
+                } label: {
+                    Image(systemName: "ellipsis")
+                }
+                .confirmationDialog("More", isPresented: $showingMoreOptions, titleVisibility: .hidden) {
+                    Button("Transaction History") {
+                        SeatGeek.openTransactionHistory()
+                    }
+                    Button("Sign Out") {
+                        SeatGeek.logOut()
+                    }
+                }
             }
     }
 }
