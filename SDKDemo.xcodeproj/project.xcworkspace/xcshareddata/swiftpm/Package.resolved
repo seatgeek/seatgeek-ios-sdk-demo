@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/seatgeek/seatgeek-ios-sdk",
       "state" : {
-        "revision" : "21953b3c72651d5a9bf632d5ac52f3b84477f8f3",
-        "version" : "4.8.1"
+        "revision" : "8858b3edf4b4fa7b346c2318e262ea818145c232",
+        "version" : "4.9.0"
       }
     }
   ],
