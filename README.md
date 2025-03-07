@@ -8,7 +8,7 @@ For the SeatGeek SDK documentation, please refer to our [developer documentation
 
 ## Requirements
 - iOS 17.5+
-- XCode 16.0+
+- XCode 16.2+
 
 ## Installation & Usage
 
