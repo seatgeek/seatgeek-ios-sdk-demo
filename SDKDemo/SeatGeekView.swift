@@ -32,8 +32,26 @@ struct SeatGeekView: View {
 struct SeatGeekViewWrapper: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> SGKSDKMyTicketsController {
         SeatGeek.configure()
+
+        // Set a listener to handle analytics.
+        SeatGeek.setAnalyticsListener(self)
+
+        // Set a callbacks object to handle type-safe user actions.
+        var callbacks = SDKActionCallbacks()
+        callbacks.authenticationCanceled = {
+            print("[Action] Authentication canceled")
+        }
+        SeatGeek.setActionCallbacks(callbacks)
+
         return SGKSDKMyTicketsController()
     }
 
     func updateUIViewController(_ uiViewController: SGKSDKMyTicketsController, context: Context) { }
+}
+
+extension SeatGeekViewWrapper: AnalyticsListener {
+    func eventFired(_ event: SeatGeekSDK.SDKAnalyticsEvent) {
+        print("[Event] Name: \(event.name)")
+        print("[Event] Attributes: \(event.attributes)")
+    }
 }

@@ -12,6 +12,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         SeatGeek.configure()
 
+        // Set a listener to handle analytics.
+        SeatGeek.setAnalyticsListener(self)
+
+        // Set a callbacks object to handle type-safe user actions.
+        var callbacks = SDKActionCallbacks()
+        callbacks.authenticationCanceled = {
+            print("[Action] Authentication canceled")
+        }
+        SeatGeek.setActionCallbacks(callbacks)
+
         let tabBarController = UITabBarController()
 
         // Displays a view controller with two options: either navigate by pushing the SeatGeek VC onto the navigation stack, or present the SeatGeek VC.
@@ -73,4 +83,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+}
+
+extension SceneDelegate: AnalyticsListener {
+    func eventFired(_ event: SeatGeekSDK.SDKAnalyticsEvent) {
+        print("[Event] Name: \(event.name)")
+        print("[Event] Attributes: \(event.attributes)")
+    }
 }
