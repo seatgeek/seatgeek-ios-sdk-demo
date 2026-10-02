@@ -4,6 +4,10 @@
 <dict>
 	<key>SeatGeek</key>
 	<dict>
+		<key>scopes</key>
+		<array>
+			<string>openid</string>
+		</array>
 		<key>ClientId</key>
 		<string>your_client_id</string>
 		<key>InstanceName</key>
