@@ -9,7 +9,7 @@ struct SeatGeekView: View {
     @State private var presenter = PresenterHolder()
 
     var body: some View {
-        SeatGeekViewWrapper((presenter: presenter)
+        SeatGeekViewWrapper(presenter: presenter)
             .navigationTitle("SeatGeek")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
