@@ -11,18 +11,21 @@ struct TabBarView: View {
 
             // Displays the SeatGeek view embedded as a child view controller within the parent view controller.
             TicketsChildView()
+                .ignoresSafeArea(.container)
                 .tabItem {
                     Label("Child", systemImage: "2.square.fill")
                 }
 
             // Displays the SeatGeek view embedded within a UINavigationController.
             TicketsNavigationView()
+                .ignoresSafeArea(.container)
                 .tabItem {
                     Label("Nav", systemImage: "3.square.fill")
                 }
 
             // Displays the SeatGeek view as a plain view
             TicketsTabView()
+                .ignoresSafeArea(.container)
                 .tabItem {
                     Label("Tab", systemImage: "4.square.fill")
                 }
