@@ -10,8 +10,11 @@ struct SeatGeekView: View {
 
     var body: some View {
         SeatGeekViewWrapper(presenter: presenter)
+            .ignoresSafeArea(.container)
             .navigationTitle("SeatGeek")
             .navigationBarTitleDisplayMode(.inline)
+            // The SDK screen is always light, so keep the bar and status bar content dark to stay readable in Dark Mode.
+            .toolbarColorScheme(.light, for: .navigationBar)
             .toolbar {
                 Button {
                     showingMoreOptions = true
