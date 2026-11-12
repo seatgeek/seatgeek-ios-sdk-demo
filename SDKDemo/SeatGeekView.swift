@@ -52,7 +52,27 @@ struct SeatGeekViewWrapper: UIViewControllerRepresentable {
     let presenter: PresenterHolder
 
     func makeUIViewController(context: Context) -> SGKSDKMyTicketsController {
-        SeatGeek.configure()
+        SeatGeek.onLoginSuccessful = {
+            let userInfo = SeatGeek.currentUserInfo
+            print("[Login] Successful")
+            print("[Login] Access token: \(SeatGeek.accessToken ?? "nil")")
+            print("[Login] ID: \(userInfo?.id ?? "nil")")
+            print("[Login] CRM ID: \(userInfo?.crmId ?? "nil")")
+            print("[Login] Email: \(userInfo?.email ?? "nil")")
+            print("[Login] Phone: \(userInfo?.mobilePhone ?? "nil")")
+
+            let oidcIdentity = SeatGeek.oidcIdentity
+            print("[Login] OIDC subject: \(oidcIdentity?.subject ?? "nil")")
+            print("[Login] OIDC email: \(oidcIdentity?.email ?? "nil")")
+        }
+
+        // Configures the SDK in code instead of the Info.plist `SeatGeek` keys (the UIKit demo uses those).
+        SeatGeek.configure(
+            clientId: "your_client_id",
+            instanceName: "your_instance_name",
+            redirectURI: "your_redirect_uri",
+            additionalScopes: ["openid"]
+        )
 
         // Set a listener to handle analytics.
         SeatGeek.setAnalyticsListener(self)
