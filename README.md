@@ -13,7 +13,9 @@ For the SeatGeek SDK documentation, please refer to our [developer documentation
 ## Installation & Usage
 
 1. Pull down the repository and open `SDKDemo.xcodeproj` in Xcode.
-2. The project contains two folders, each with its own `.plist` file. Make sure to fill in your `ClientId`, `InstanceName`, and `RedirectURI` in the `SDKDemo/Info.plist` and `SDKDemo-UIKit/Info.plist` files before running the project.
+2. Fill in your client details before running the project. The two demos show the two ways to configure the SDK:
+   - The SwiftUI demo configures it in code. Fill in your `clientId`, `instanceName` and `redirectURI` in the `SeatGeek.configure(...)` call in `SDKDemo/SeatGeekView.swift`.
+   - The UIKit demo reads them from Info.plist. Fill in your `ClientId`, `InstanceName` and `RedirectURI` in `SDKDemo-UIKit/Info.plist`.
 
 - Use the `SDKDemo` target to run the SwiftUI demo app.
 - Use the `SDKDemo-UIKit` target to run the UIKit demo app.
